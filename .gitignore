@@ -5,9 +5,6 @@ __pycache__/
 # C extensions
 *.so
 
-# Coverage and testing
-.coverage
-
 # Distribution / packaging
 .Python
 env/
@@ -58,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Eclipse files
+.project
+.pydevproject
