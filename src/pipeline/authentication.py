@@ -3,12 +3,17 @@
 
 from unittest import TestCase
 from mock import patch
-from _io import StringIO
 from mock.mock import mock_open
 
-USER_FILE_LOCATION='/etc/users.txt'
+USER_FILE_LOCATION = '/etc/users.txt'
+
+MOCK_FILE_DATA = "shane|pass\nben|jedi\nhannah|pink\n"
 
 def login(username, password):
+    """Check that the credentials offered are in the users file.
+
+       username: This is the username for the user.
+       password: This is the password for the user."""
     print('Opening file')
     with open(USER_FILE_LOCATION) as user_file:
         print("Reading the details")
@@ -20,21 +25,21 @@ def login(username, password):
         return True
     else:
         return False
-   
-# Add testing to ensure this module works 
 
+
+# Add testing to ensure this module works
 class AuthenticationTests(TestCase):
     """Ensure that the authentication module works as expected."""
 
-    @patch('%s.open' % __name__, mock_open(read_data="shane|pass\n"), create=True)
+    @patch('%s.open' % __name__, mock_open(read_data=MOCK_FILE_DATA), create=True)
     def test_login(self):
         """Test the login function."""
         open_name = '%s.open' % __name__
         print("Overloaded name for open is %s" % (open_name))
-        
+
         self.assertTrue(login('shane', 'pass'))
-        
-    @patch('%s.open' % __name__, mock_open(read_data="shane|pass\nben|jedi\nhannah|pink\n"), create=True)
+
+    @patch('%s.open' % __name__, mock_open(read_data=MOCK_FILE_DATA), create=True)
     def test_login_no_user(self):
         """Test that login will fail when the user is unknown."""
         self.assertFalse(login("fred", "pass"))

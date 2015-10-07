@@ -1,0 +1,124 @@
+************* Module pipeline.authentication
+pipeline/authentication.py:9: [C0326(bad-whitespace), ] Exactly one space required around assignment
+USER_FILE_LOCATION='/etc/users.txt'
+                  ^
+pipeline/authentication.py:23: [C0303(trailing-whitespace), ] Trailing whitespace
+pipeline/authentication.py:24: [C0303(trailing-whitespace), ] Trailing whitespace
+pipeline/authentication.py:34: [C0303(trailing-whitespace), ] Trailing whitespace
+pipeline/authentication.py:36: [C0303(trailing-whitespace), ] Trailing whitespace
+pipeline/authentication.py:37: [C0301(line-too-long), ] Line too long (105/100)
+pipeline/authentication.py:11: [C0111(missing-docstring), login] Missing function docstring
+pipeline/authentication.py:6: [W0611(unused-import), ] Unused StringIO imported from _io
+
+
+Report
+======
+24 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |2      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |2      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |1      |NC         |NC         |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    mock (pipeline.authentication)
+      \-mock (pipeline.authentication)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |29     |78.38 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |4      |10.81 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |2      |5.41  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |2      |5.41  |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |7      |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |1      |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++------------------------+------+--------+---------+-----------+
+|module                  |error |warning |refactor |convention |
++========================+======+========+=========+===========+
+|pipeline.authentication |0.00  |100.00  |0.00     |100.00     |
++------------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++--------------------+------------+
+|message id          |occurrences |
++====================+============+
+|trailing-whitespace |4           |
++--------------------+------------+
+|unused-import       |1           |
++--------------------+------------+
+|missing-docstring   |1           |
++--------------------+------------+
+|line-too-long       |1           |
++--------------------+------------+
+|bad-whitespace      |1           |
++--------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 6.67/10
+
